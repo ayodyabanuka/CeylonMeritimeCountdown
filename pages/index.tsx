@@ -58,7 +58,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col pt-24 items-center bg-[#1e1f29]">
       <Head>
-        <title>Launch Countdown Timer</title>
+        <title>Ceylon Maritime</title>
         <link rel="icon" href="/Logo.png" />
 
       </Head>

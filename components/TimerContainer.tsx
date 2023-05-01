@@ -2,10 +2,10 @@ import React from 'react'
 import { NumberBox } from './NumberBox'
 
 interface timeProps {
-  days: number | string,
-  hours: number | string,
-  minutes: number | string,
-  seconds: number | string,
+  days: number,
+  hours: number,
+  minutes: number,
+  seconds: number,
 }
 
 export const TimerContainer = ({ days, hours, minutes, seconds }: timeProps) => {
@@ -50,19 +50,19 @@ export const TimerContainer = ({ days, hours, minutes, seconds }: timeProps) => 
 
 
   if (days < 10) {
-    days = "0" + days
+    days = Number("0" + days)
   }
 
   if (hours < 10) {
-    hours = "0" + hours
+    hours = Number("0" + hours)
   }
 
   if (minutes < 10) {
-    minutes = "0" + minutes
+    minutes = Number("0" + minutes)
   }
 
   if (seconds < 10) {
-    seconds = "0" + seconds
+    seconds = Number("0" + seconds)
 
   }
 
