@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { BsChevronExpand, BsX, BsDashLg, BsCode } from "react-icons/bs";
 
@@ -9,7 +10,7 @@ const Home: React.FC = () => {
   const [day, setDays] = useState('');
   const [hours, setHours] = useState('');
   const [mins, setMins] = useState('');
-  const [sec,setSec] = useState('');
+  const [sec, setSec] = useState('');
 
 
 
@@ -62,7 +63,7 @@ const Home: React.FC = () => {
             <div className='font-bold tracking-tight text-transparent text-center text-xs'>Ceylonx</div>
           </div>
           <div className='flex items-center justify-center flex-col xl:my-20 lg:my-16 md:my-14 my-4 text-white'>
-            <img src="/logo.png" className='xl:w-32 lg:w-28 md:w-28 w-20 ' alt="" />
+            <Image height={100} width={100} src="/logo.png" className='xl:w-32 lg:w-28 md:w-28 w-20 ' alt="logo" />
             <h1 className="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold mb-4 mt-3 ">Coming Soon!</h1>
             <div className='flex gap-4'>
               <div className='flex items-end gap-2 justify-center'>
