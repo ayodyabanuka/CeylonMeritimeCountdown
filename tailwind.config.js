@@ -6,19 +6,23 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        flip:'flip 1s cubic-bezier(0, 0, 0.2, 1) infinite'
+        flip: 'flip 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
-      keyframes:{
+      keyframes: {
         flip: {
-          'from': { transform:  'rotateX(0deg)', transformOrigin: '50% bottom ', },
-          'to':{transform:  'rotateX(180deg)', transformOrigin: '50% bottom ',}
-        }
-      }
-    },
-       fontFamily: {
-      'redhat':['Red Hat Text', 'sans-serif'],
+          from: { transform: 'rotateX(0deg)', transformOrigin: '50% bottom ' },
+          to: { transform: 'rotateX(180deg)', transformOrigin: '50% bottom ' },
+        },
       },
-  plugins: [],
-}
-
+    },
+    fontFamily: {
+      redhat: ['Red Hat Text', 'sans-serif'],
+    },
+    plugins: [],
+    purge: [
+      './src/**/*.{js,jsx,ts,tsx}',
+      './next.config.js',
+      './public/**/*.html',
+    ],
+  },
 }
