@@ -4,6 +4,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      inter: ['Inter', 'sans-serif'],
+    },
     extend: {
       animation: {
         flip: 'flip 1s cubic-bezier(0, 0, 0.2, 1) infinite',
@@ -14,9 +17,6 @@ module.exports = {
           to: { transform: 'rotateX(180deg)', transformOrigin: '50% bottom ' },
         },
       },
-    },
-    fontFamily: {
-      redhat: ['Red Hat Text', 'sans-serif'],
     },
     plugins: [],
     purge: [

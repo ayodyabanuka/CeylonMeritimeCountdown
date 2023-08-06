@@ -1,95 +1,113 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { BsChevronExpand, BsX, BsDashLg, BsCode } from "react-icons/bs";
-import Logo from "../public/Logo.png"
-import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa'
 
 const Home: React.FC = () => {
-  const targetDate = '2023-08-30'; // Change this to your desired target date
 
-  const [timeLeft, setTimeLeft] = useState<string>('');
-  const [day, setDays] = useState('');
-  const [hours, setHours] = useState('');
-  const [mins, setMins] = useState('');
-  const [sec, setSec] = useState('');
-
-
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const now = new Date().getTime();
-      const target = new Date(targetDate).getTime();
-      const timeRemaining = target - now;
-
-      if (timeRemaining <= 0) {
-        setTimeLeft('Countdown finished!');
-        clearInterval(intervalId);
-      } else {
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-        setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-        setDays(`${days}`);
-        setMins(`${minutes}`);
-        setHours(`${hours}`);
-        setSec(`${seconds}`)
-
-      }
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [targetDate]);
 
   return (
-    <div className='bg-cover bg-center bg-no-repeat h-screen w-screen' style={{ backgroundImage: 'url("/background.jpg")' }}>
+    <div className='bg-[#F6FAFF] min-h-screen'>
       <Head>
         <title>Ceylon Maritime</title>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        />
         <meta name="description" content="Ceylon Maritime website" />
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div className="h-screen w-screen flex flex-col justify-between items-center">
-        <div></div>
-        <div className='xl:w-[700px] xl:h-[450px] lg:w-[550px] lg:h-[350px] md:w-[400px] md:h-[350px] w-[350px] h-[250px]  border  rounded-lg backdrop-blur-md bg-gray-800/40 flex flex-col'>
-          <div className='flex border-b py-1 px-2 justify-between'>
-            <div className='flex gap-1.5'>
-              <BsX className='text-black text-xs p-[1px] font-extralight h-3 w-3 bg-red-400 rounded-full flex items-center justify-center' />
-              <BsDashLg className='text-black text-xs h-3 w-3 p-[2px] bg-orange-400 rounded-full flex items-center justify-center' />
-              <BsCode className='text-black text-xs h-3 w-3 p-[1px] rotate-45 text-bold bg-green-400 rounded-full flex items-center justify-center' />
+      <div className=' mx-auto font-inter'>
+        {/* mainimage */}
+
+        <div className='relative'>
+          <div className='absolute'>
+            <div className='z-1 flex px-48 justify-between p-5 items-center w-[1920px] text-inter'>
+              <img src="/logo.png" width={60} alt="" />
+              <div className='flex gap-10'>
+                <a href="/" rel="noopener noreferrer">Home</a>
+                <a href="/" rel="noopener noreferrer">About Us</a>
+                <a href="/" rel="noopener noreferrer">Contact Us</a>
+              </div>
             </div>
-            <div className='font-bold tracking-tight text-white text-center text-xs'>Ceylon Maritime</div>
-            <div className='font-bold tracking-tight text-transparent text-center text-xs'>Ceylonx</div>
           </div>
-          <div className='flex items-center justify-center flex-col xl:my-20 lg:my-16 md:my-14 my-4 text-white'>
-            <Image height={100} width={100} src={Logo} className='xl:w-32 lg:w-28 md:w-28 w-20 ' alt="logo" />
-            <h1 className="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold mb-4 mt-3 ">Coming Soon!</h1>
-            <div className='flex gap-4'>
-              <div className='flex items-end gap-2 justify-center'>
-                <div className="xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-bold">{day}</div>
-                <div className='xl:text-md lg:text-md md:text-sm text-xs'>Days</div>
-              </div>
-              <div className='flex items-end gap-2 justify-center'>
-                <div className="xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-bold">{hours}</div>
-                <div className='xl:text-md lg:text-md md:text-sm text-xs'>Hours</div>
-              </div>
-              <div className='flex items-end gap-2 justify-center'>
-                <div className="xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-bold">{mins}</div>
-                <div className='xl:text-md lg:text-md md:text-sm text-xs'>Minutes</div>
-              </div>
-              <div className='lg:flex hidden items-end gap-2 justify-center'>
-                <div className="xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-bold">{sec}</div>
-                <div className='xl:text-md lg:text-md md:text-sm text-xs'>Seconds</div>
-              </div>
+          <div className='flex justify-between items-center px-48 bg-[#E8F2FF] '>
+
+            <div className='flex flex-col gap-0'>
+              <div className='font-inter text-3xl font-bold tracking-tighter'>Your Gateway to the</div>
+              <div className='font-inter text-9xl font-extrabold tracking-tighter text-[#1D60B1]'>Maritime</div>
+              <div className='font-inter text-9xl font-extrabold tracking-tighter text-[#1D60B1] -mt-5'>World</div>
+              <div className='font-inter text-lg font-light tracking-tight'>Explore Shipping, Logistics, and Shipbuilding Solutions with Us.</div>
+              <a href={'#'}><div className='flex items-center px-3 py-2 bg-[#9C1717] w-fit text-white gap-2 rounded-xl mt-5'>ContactUs <FaArrowRight /> </div></a>
+
+            </div>
+
+            <div>
+              <img src="/ceylonMaritimeHome.png" width={900} alt="" />
             </div>
           </div>
         </div>
-        <div className='text-white text-sm p-2 bg-gray-600/40 backdrop-blur-sm w-full flex text-center justify-center items-center gap-1'><div>© 2023</div> <a target="_blank"
-          rel="noopener noreferrer" href={'ayodyabanukafernando.com'}>AB</a> <div> | All rights reserved.</div></div>
+        {/* AboutUs */}
+        <div className=' flex px-52 py-10 items-center justify-between'>
+          <div className='w-1/3 flex flex-col gap-1'>
+            <div className='text-xs font-inter font-bold text-[#1D60B1] tracking-tighter'>ABOUT US</div>
+            <div className='text-4xl font-inter font-bold tracking-tighter'>We are the best Maritime company in Sri Lanka</div>
+            <div className='text-md font-inter font-light tracking-tight' >Welcome to Ceylon Maritime. We are dedicated to providing comprehensive and reliable information about the maritime industry. Whether you're a shipping professional, a maritime enthusiast, or a business looking for maritime solutions, we have everything you need to navigate the waters of this dynamic industry.</div>
+          </div>
+          <div className=''>
+            <img src="/image2.png" width={700} alt="" />
+          </div>
+        </div>
+        {/* Services */}
+
+        <div className='bg-[rgb(233,242,253)]'>
+          <div className=' flex px-52 py-10 items-center justify-center'>
+            <div className='w-1/3 flex flex-col gap-1 justify-center items-center'>
+              <div className='text-xs font-inter font-bold text-[#1D60B1] tracking-tighter'>OUR SERVICES</div>
+              <div className='text-4xl font-inter font-bold tracking-tighter text-center'>Managing your business</div>
+              <div className='text-4xl font-inter font-bold tracking-tighter text-center -my-1'>with our best services</div>
+            </div>
+          </div>
+          <div className='grid grid-cols-4 px-72 gap-4 py-10'>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+            <div className='flex flex-col justify-between h-80 p-10 bg-white shadow-lg rounded-lg'></div>
+          </div>
+        </div>
+        <div className='grid grid-cols-4 mx-48 font-inter p-5 items-center'>
+          <div className='flex flex-col gap-3'>
+            <img src="/logo.png" width={60} alt="" />
+            <div className='text-4xl font-inter font-bold tracking-tighter'>Ceylon Maritime</div>
+            <div className='text-md font-inter font-light tracking-tight' >Welcome to Ceylon Maritime. We are dedicated to providing comprehensive and reliable information about the maritime industry. Whether you're a shipping professional, a maritime enthusiast, or a business looking for maritime solutions, we have everything you need to navigate the waters of this dynamic industry.</div>
+            <div className='text-md font-inter font-bold tracking-tight mt-5' >address</div>
+            <div className='text-md font-inter font-bold tracking-tight' >Phone Number</div>
+
+          </div>
+          <div className='grid justify-start col-span-3 grid-cols-3 mx-12'>
+            <div className='flex flex-col gap-5'>
+              <div className='text-md font-inter font-bold tracking-tight'>Pages</div>
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Contact Us</a>
+            </div>
+            <div className='flex flex-col gap-5'>
+              <div className='text-md font-inter font-bold tracking-tight'>About</div>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy policy</a>
+            </div>
+            <div className='flex flex-col gap-5'>
+              <div className='text-md font-inter font-bold tracking-tight'>help & Support</div>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+        </div>
+        <div className='w-full flex justify-center items-center font-base my-3 text-gray-800 text-xs'>
+        ©2023 AB | ALL RIGHTS RESERVED.
+        </div>
       </div>
 
     </div>
