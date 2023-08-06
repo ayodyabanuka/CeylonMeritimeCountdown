@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { BsChevronExpand, BsX, BsDashLg, BsCode } from "react-icons/bs";
 import Logo from "../public/Logo.png"
+import Link from 'next/link';
 
 const Home: React.FC = () => {
   const targetDate = '2023-08-30'; // Change this to your desired target date
@@ -52,7 +53,8 @@ const Home: React.FC = () => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div className="h-screen w-screen flex justify-center items-center">
+      <div className="h-screen w-screen flex flex-col justify-between items-center">
+        <div></div>
         <div className='xl:w-[700px] xl:h-[450px] lg:w-[550px] lg:h-[350px] md:w-[400px] md:h-[350px] w-[350px] h-[250px]  border  rounded-lg backdrop-blur-md bg-gray-800/40 flex flex-col'>
           <div className='flex border-b py-1 px-2 justify-between'>
             <div className='flex gap-1.5'>
@@ -86,7 +88,10 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className='text-white text-sm p-2 bg-gray-600/40 backdrop-blur-sm w-full flex text-center justify-center items-center gap-1'><div>© 2023</div> <a target="_blank"
+          rel="noopener noreferrer" href={'ayodyabanukafernando.com'}>AB</a> <div> | All rights reserved.</div></div>
       </div>
+
     </div>
   );
 };
