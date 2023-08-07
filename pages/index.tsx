@@ -88,8 +88,10 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className='text-white text-sm p-2 bg-gray-600/40 backdrop-blur-sm w-full flex text-center justify-center items-center gap-1'><div>© 2023</div> <a target="_blank"
-          rel="noopener noreferrer" href={'ayodyabanukafernando.com'}>AB</a> <div> | All rights reserved.</div></div>
+        <div className='text-white text-sm p-2 bg-gray-600/40 backdrop-blur-sm w-full flex text-center justify-center items-center gap-1'>
+          <div>© 2023</div> 
+        <Link href={"https://www.ayodyabanukafernando.com/"}>AB</Link>
+         <div> | All rights reserved.</div></div>
       </div>
 
     </div>
