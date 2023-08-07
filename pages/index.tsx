@@ -50,7 +50,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Ceylon Maritime</title>
         <meta name="description" content="Ceylon Maritime website" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href={'.../public/Logo.png'} />
       </Head>
 
       <div className="h-screen w-screen flex flex-col justify-between items-center">
@@ -89,9 +89,9 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className='text-white text-sm p-2 bg-gray-600/40 backdrop-blur-sm w-full flex text-center justify-center items-center gap-1'>
-          <div>© 2023</div> 
-        <Link href={"https://www.ayodyabanukafernando.com/"}>AB</Link>
-         <div> | All rights reserved.</div></div>
+          <div>© 2023</div>
+          <Link href={"https://www.ayodyabanukafernando.com/"}>AB</Link>
+          <div> | All rights reserved.</div></div>
       </div>
 
     </div>
