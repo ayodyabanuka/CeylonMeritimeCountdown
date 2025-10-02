@@ -57,7 +57,7 @@ const StartupAnimation = () => {
       <div className='text-center'>
         <div ref={logoRef} className='mb-8'>
           <Image
-            src='/logo.png'
+            src='/Logo.png'
             alt='Ceylon Maritime'
             width={128}
             height={128}

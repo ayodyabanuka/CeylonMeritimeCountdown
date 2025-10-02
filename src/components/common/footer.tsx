@@ -40,7 +40,7 @@ const Footer = () => {
         viewport={{ once: true }}
       >
         <Image
-          src='/logo.png'
+          src='/Logo.png'
           alt='logo'
           width={80}
           height={80}
