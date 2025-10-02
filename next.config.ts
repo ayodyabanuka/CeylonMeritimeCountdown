@@ -17,8 +17,9 @@ const nextConfig: NextConfig = {
         source: '/(.*)',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'ALLOWALL',
+            key: 'Content-Security-Policy',
+            value:
+              "media-src 'self' https://drive.google.com; frame-src 'self' https://drive.google.com;",
           },
         ],
       },

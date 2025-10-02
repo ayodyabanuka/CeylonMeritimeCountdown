@@ -26,10 +26,7 @@ const Hero = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
       >
-        <source
-          src='https://drive.google.com/uc?export=download&id=1JoA7mxlU_fHxaySCbkZ7c9NeWvfyKQw9'
-          type='video/mp4'
-        />
+        <source src='/bg.mp4' type='video/mp4' />
       </motion.video>
       <motion.div
         className='absolute inset-0 w-full h-full flex items-end z-20 overflow-hidden'
