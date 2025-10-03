@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "media-src 'self' https://drive.google.com; frame-src 'self' https://drive.google.com;",
+              "media-src 'self' https://drive.google.com; frame-src 'self' https://drive.google.com https://www.google.com;",
           },
         ],
       },

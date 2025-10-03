@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Services = () => {
   const containerVariants = {
@@ -64,81 +65,89 @@ const Services = () => {
         whileInView='visible'
         viewport={{ once: true }}
       >
-        <motion.div
-          className='overflow-hidden rounded-2xl md:rounded-4xl relative group'
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/1.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
-          <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
-            <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
-              Shipping Agency Services
+        <Link href='/services#shipping-agency'>
+          <motion.div
+            className='overflow-hidden rounded-2xl md:rounded-4xl relative group cursor-pointer'
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/1.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
+            <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
+              <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
+                Shipping Agency Services
+              </div>
             </div>
-          </div>
-          <div className='absolute inset-0 flex items-end justify-end z-20'>
-            <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
-              Read More
+            <div className='absolute inset-0 flex items-end justify-end z-20'>
+              <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
+                Read More
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </Link>
 
-        <motion.div
-          className='overflow-hidden rounded-2xl md:rounded-4xl relative group'
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/2.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
-          <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
-            <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
-              Marine Services
+        <Link href='/services#marine-services'>
+          <motion.div
+            className='overflow-hidden rounded-2xl md:rounded-4xl relative group cursor-pointer'
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/2.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
+            <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
+              <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
+                Marine Services
+              </div>
             </div>
-          </div>
-          <div className='absolute inset-0 flex items-end justify-end z-20'>
-            <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
-              Read More
+            <div className='absolute inset-0 flex items-end justify-end z-20'>
+              <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
+                Read More
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </Link>
 
-        <motion.div
-          className='overflow-hidden rounded-2xl md:rounded-4xl relative group'
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/3.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
-          <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
-            <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
-              Ship Chandelling Services
+        <Link href='/services#ship-chandelling'>
+          <motion.div
+            className='overflow-hidden rounded-2xl md:rounded-4xl relative group cursor-pointer'
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/3.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
+            <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
+              <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
+                Ship Chandelling Services
+              </div>
             </div>
-          </div>
-          <div className='absolute inset-0 flex items-end justify-end z-20'>
-            <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
-              Read More
+            <div className='absolute inset-0 flex items-end justify-end z-20'>
+              <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
+                Read More
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </Link>
 
-        <motion.div
-          className='overflow-hidden rounded-2xl md:rounded-4xl relative group'
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/4.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
-          <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
-            <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
-              Logistics & Warehousing Solutions
+        <Link href='/services#logistics-warehousing'>
+          <motion.div
+            className='overflow-hidden rounded-2xl md:rounded-4xl relative group cursor-pointer'
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className='overflow-hidden rounded-2xl md:rounded-4xl aspect-square bg-[url(/services/4.png)] bg-cover bg-center group-hover:scale-105 transition-all duration-300'></div>
+            <div className='absolute inset-0 flex items-start justify-start p-4 md:p-10 z-20'>
+              <div className='text-white text-sm md:text-base font-medium font-instrument-sans'>
+                Logistics & Warehousing Solutions
+              </div>
             </div>
-          </div>
-          <div className='absolute inset-0 flex items-end justify-end z-20'>
-            <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
-              Read More
+            <div className='absolute inset-0 flex items-end justify-end z-20'>
+              <div className='text-black bg-white px-4 md:px-10 py-2 md:py-5 rounded-tl-2xl md:rounded-tl-3xl backdrop-blur-sm drop-shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-white text-xs md:text-base'>
+                Read More
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </Link>
       </motion.div>
     </motion.div>
   );

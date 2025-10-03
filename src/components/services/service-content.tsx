@@ -43,7 +43,7 @@ const ServicesContent = () => {
         </motion.div>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 py-15 md:py-30 border-t border-b border-black/10'>
-        <div className='h-64 md:h-80 lg:h-full overflow-hidden relative rounded-2xl md:rounded-4xl'>
+        <div className='h-64 md:h-80 lg:h-110 overflow-hidden relative rounded-2xl md:rounded-4xl'>
           <div className='absolute inset-0 w-full h-[140%]'>
             <Image
               src='/services/1.png'
@@ -53,7 +53,7 @@ const ServicesContent = () => {
             />
           </div>
         </div>
-        <div>
+        <div id='shipping-agency'>
           <div className='text-[#1d60b1] text-lg md:text-xl lg:text-3xl font-bold font-instrument-sans items-start sm:items-center justify-between gap-4 sm:gap-0'>
             Shipping Agency Services
           </div>
@@ -74,7 +74,7 @@ const ServicesContent = () => {
           </div>
         </div>
 
-        <div className='h-64 md:h-80 lg:h-full overflow-hidden relative rounded-2xl md:rounded-4xl block lg:hidden'>
+        <div className='h-64 md:h-80 lg:h-110 overflow-hidden relative rounded-2xl md:rounded-4xl block lg:hidden'>
           <div className='absolute inset-0 w-full h-[140%]'>
             <Image
               src='/services/2.png'
@@ -84,7 +84,7 @@ const ServicesContent = () => {
             />
           </div>
         </div>
-        <div>
+        <div id='marine-services'>
           <div className='text-[#1d60b1] text-lg md:text-xl lg:text-3xl font-bold font-instrument-sans items-start sm:items-center justify-between gap-4 sm:gap-0'>
             Marine Services
           </div>
@@ -100,7 +100,7 @@ const ServicesContent = () => {
             <li>Tug and Launch Services</li>
           </div>
         </div>
-        <div className='h-64 md:h-80 lg:h-full overflow-hidden relative rounded-2xl md:rounded-4xl hidden lg:block'>
+        <div className='h-64 md:h-80 lg:h-110 overflow-hidden relative rounded-2xl md:rounded-4xl hidden lg:block'>
           <div className='absolute inset-0 w-full h-[140%]'>
             <Image
               src='/services/2.png'
@@ -111,7 +111,7 @@ const ServicesContent = () => {
           </div>
         </div>
 
-        <div className='h-64 md:h-80 lg:h-full overflow-hidden relative rounded-2xl md:rounded-4xl'>
+        <div className='h-64 md:h-80 lg:h-110 overflow-hidden relative rounded-2xl md:rounded-4xl'>
           <div className='absolute inset-0 w-full h-[140%]'>
             <Image
               src='/services/3.png'
@@ -121,7 +121,7 @@ const ServicesContent = () => {
             />
           </div>
         </div>
-        <div>
+        <div id='ship-chandelling'>
           <div className='text-[#1d60b1] text-lg md:text-xl lg:text-3xl font-bold font-instrument-sans items-start sm:items-center justify-between gap-4 sm:gap-0'>
             Ship Chandelling Services
           </div>
@@ -140,7 +140,43 @@ const ServicesContent = () => {
             <li>Anti Piracy Equipment’s</li>
           </div>
         </div>
+        <div className='h-64 md:h-80 lg:h-110 overflow-hidden relative rounded-2xl md:rounded-4xl lg:hidden block'>
+          <div className='absolute inset-0 w-full h-[140%]'>
+            <Image
+              src='/services/4.png'
+              alt='services'
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
+        <div id='logistics-warehousing'>
+          <div className='text-[#1d60b1] text-lg md:text-xl lg:text-3xl font-bold font-instrument-sans items-start sm:items-center justify-between gap-4 sm:gap-0'>
+            Logistics & Warehousing Solutions
+          </div>
+          <div className='text-black text-sm md:text-base lg:text-xl font-medium font-instrument-sans items-start justify-between gap-4 sm:gap-0 list-disc pl-5 flex flex-col py-6 md:py-10'>
+            <li>Container handling and storage</li>
+            <li>Customs clearance and documentation</li>
+            <li>Warehouse management and distribution</li>
+            <li>Cargo consolidation and deconsolidation</li>
+            <li>Supply chain optimization</li>
+            <li>Inventory management systems</li>
+            <li>Cross-docking services</li>
+            <li>Last-mile delivery solutions</li>
+          </div>
+        </div>
+        <div className='h-64 md:h-80 lg:h-110 overflow-hidden relative rounded-2xl md:rounded-4xl lg:block hidden'>
+          <div className='absolute inset-0 w-full h-[140%]'>
+            <Image
+              src='/services/4.png'
+              alt='services'
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
       </div>
+
       <div className='text-black text-sm md:text-base lg:text-lg font-medium font-instrument-sans lg:text-center items-start justify-between gap-4 sm:gap-0 py-6 md:py-10 px-4'>
         Ceylon Maritime Agencies (PVT) Ltd, can provide the above-mentioned Ship
         Agency Services, Marine Services, and Ship Chandling Services at the
